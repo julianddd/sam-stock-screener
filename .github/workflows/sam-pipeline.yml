@@ -35,5 +35,5 @@ jobs:
           pytest tests/unit/test_handler.py
 
 # sam deploy
-      - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset --stack-name sam-hello-world --s3-bucket AWS_S3_BUCKET_NAME --capabilities CAPABILITY_IAM --region ${{ env.AWS_REGION }}
+      - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset --stack-name sam-hello-world --capabilities CAPABILITY_IAM --region ${{ env.AWS_REGION }}
         if: github.ref == 'refs/heads/main'
